@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a example repo on creating a very simple web app allowing users to add cars for sale with price and miles datawith ASP.NET Core MVC and C#. 
+This is a example repo on creating a very simple web app allowing users to add cars for sale with price and miles data, built with ASP.NET Core MVC and C#. 
 
 ## Technologies Used
 
