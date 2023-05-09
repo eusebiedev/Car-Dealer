@@ -9,11 +9,16 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous">
   </head>
-  <body>
-    <form action="/items" method="post">
-      <label for="description">Add a new car</label>
-      <input id="description" name="description" type="text">
-      <button type="submit">Submit</button>
+  <body class="p-3 m-0">
+    <h1>Please enter your car's information:</h1>
+    <form action="/cars" method="post" class="list-group">
+      <label for="carType">Add a new car</label>
+      <input id="carType" name="carType" type="text" class="form-control">
+      <label for="price">Price</label>
+      <input id="price" name="price" type="text" class="form-control">
+      <label for="miles">Miles</label>
+      <input id="miles" name="miles" type="text" class="form-control"><br>
+      <button type="submit" class="btn btn-success btn-small">Submit</button>
     </form>
   </body>
 </html>
