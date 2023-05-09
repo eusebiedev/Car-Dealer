@@ -31,5 +31,19 @@ namespace CarDealer.Tests
       //Assert
       Assert.AreEqual(carType, result);
     }
+
+    [TestMethod]
+    public void SetCarType_SetsCarType_String()
+    {
+      //Arrange
+      string carType = "Corolla";
+      Car newCar = new Car(carType);
+      //Act
+      string updatedCarType = "Corolla LE";
+      newCar.CarType = updatedCarType;
+      string result = newCar.CarType;
+      //Assert
+      Assert.AreEqual(updatedCarType, result);
+    }
   }
 }
