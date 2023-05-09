@@ -6,14 +6,14 @@ namespace CarDealer.Models
   {
     public string CarType { get; set; }
     public int Price { get; set; }
-    // public int Miles { get; set; }
+    public int Miles { get; set; }
     private static List<Car> _instances = new List<Car> { };
 
-    public Car(string carType, int price)
+    public Car(string carType, int price, int miles)
     {
       CarType = carType;
       Price = price;
-      // Miles = miles;
+      Miles = miles;
       _instances.Add(this);
     }
 
