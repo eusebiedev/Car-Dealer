@@ -6,11 +6,18 @@ using System;
 namespace CarDealer.Tests
 {
   [TestClass]
-  public class CarDealerTests : IDisposable
+  public class CarTests
   {
-    public void Dispose()
+    // public void Dispose()
+    // {
+    //   CarDealer.ClearAll();
+    // }
+
+    [TestMethod]
+    public void CarConstructor_CreatesInstanceOfCar_Car()
     {
-      CarDealer.ClearAll();
+      Car newCar = new Car();
+      Assert.AreEqual(typeof(Car), newCar.GetType());
     }
   }
 }
