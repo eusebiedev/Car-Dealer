@@ -16,7 +16,7 @@ namespace CarDealer.Tests
     [TestMethod]
     public void CarConstructor_CreatesInstanceOfCar_Car()
     {
-      Car newCar = new Car("Corolla");
+      Car newCar = new Car("Corolla", 0);
       Assert.AreEqual(typeof(Car), newCar.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace CarDealer.Tests
       //Arrange
       string carType = "Corolla";
       //Act
-      Car newCar = new Car(carType);
+      Car newCar = new Car(carType, 0);
       string result = newCar.CarType;
       //Assert
       Assert.AreEqual(carType, result);
@@ -37,13 +37,25 @@ namespace CarDealer.Tests
     {
       //Arrange
       string carType = "Corolla";
-      Car newCar = new Car(carType);
+      Car newCar = new Car(carType, 0);
       //Act
       string updatedCarType = "Corolla LE";
       newCar.CarType = updatedCarType;
       string result = newCar.CarType;
       //Assert
       Assert.AreEqual(updatedCarType, result);
+    }
+
+    [TestMethod]
+    public void GetCarPrice_ReturnsCarPrice_Int()
+    {
+      //Arrange
+      int price = 0;
+      //Act
+      Car newCar = new Car("corolla", price);
+      int result = newCar.Price;
+      //Assert
+      Assert.AreEqual(price, result);
     }
   }
 }
