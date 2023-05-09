@@ -84,5 +84,19 @@ namespace CarDealer.Tests
       //Assert
       Assert.AreEqual(miles, result);
     }
+
+    [TestMethod]
+    public void SetCarMiles_SetsCarMiles_Int()
+    {
+      //Arrange
+      int miles = 0;
+      Car newCar = new Car("corolla", 10, miles);
+      //Act
+      int updatedCarMiles = 15;
+      newCar.Miles = updatedCarMiles;
+      int result = newCar.Miles;
+      //Assert
+      Assert.AreEqual(updatedCarMiles, result);
+    }
   }
 }
